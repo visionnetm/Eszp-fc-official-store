@@ -207,7 +207,7 @@ document.getElementById('checkoutBtn').onclick=async()=>{
   const lines=cart.map(i=>`• ${i.title} x${i.qty} = ${fmt(i.qty*i.price)}`).join('\n');
   const payload={buyer_email:email,order_lines:lines,order_total:fmt(cartSubtotal()),store_name:'ESZP FC Webshop'};
   try{
-    await emailjs.send("eszp_fc","template_mvhe4ig",payload);
+    await emailjs.send("Eszp_fc","template_mvhe4ig",payload);
     alert('Köszönjük! Rendelésed elküldve. Hamarosan emailben visszaigazoljuk.');
     cart=[];saveCart();updateCartUI();closeCart();
   }catch(e){console.error(e);alert('Az oldal rendelési funkcoíja jelenleg nem müködik , írja meg az eszpfcofficial@gmail.com címre , hogy mit akar vásárolni.');}
