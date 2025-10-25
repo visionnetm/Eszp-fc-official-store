@@ -20,6 +20,38 @@
   *{box-sizing:border-box;margin:0;padding:0}
   body{font-family:Arial, sans-serif;line-height:1.5;color:#053c3a;background:#f8fafc}
   a{text-decoration:none}
+    *{box-sizing:border-box;margin:0;padding:0}
+
+    /* Banner */
+    .top-banner{
+      position:fixed;
+      top:0;
+      left:0;
+      width:100%;
+      background:linear-gradient(90deg,#ff9a00,#ff7a00); /* narancs átmenet */
+      color:#fff;
+      font-weight:700;
+      text-align:center;
+      padding:10px 16px;
+      z-index:9999;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:12px;
+      box-shadow:0 2px 6px rgba(0,0,0,0.12);
+      font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    .top-banner__text{
+      font-size:16px;
+      line-height:1.2;
+    }
+
+    /* Kisebb képernyőn kisebb betű */
+    @media (max-width:480px){
+      .top-banner__text{font-size:14px}
+      .top-banner{padding:8px 10px}
+    }
 
   /* HERO */
   .hero{
